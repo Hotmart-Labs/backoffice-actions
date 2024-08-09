@@ -12,6 +12,6 @@ outputs:
 runs:
   using: "composite"
   steps:
-    - run: $GITHUB_ACTION_PATH/entrypoint.sh
+    - run: ./entrypoint.sh
       id: detect-language
       shell: bash

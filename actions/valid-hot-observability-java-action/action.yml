@@ -4,5 +4,5 @@ description: "Detects if contains Hot Observability on pom.xml"
 runs:
   using: "composite"
   steps:
-    - run: $GITHUB_ACTION_PATH/entrypoint.sh
+    - run: ./entrypoint.sh
       shell: bash
