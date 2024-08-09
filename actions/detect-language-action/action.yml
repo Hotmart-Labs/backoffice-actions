@@ -1,10 +1,6 @@
 name: "Detect Language"
 description: "Detects the programming language of the project based on common files."
-inputs:
-  path:
-    description: "Path to the project directory"
-    required: false
-    default: "."
+
 outputs:
   language:
     description: "The detected programming language."
@@ -12,6 +8,10 @@ outputs:
 runs:
   using: "composite"
   steps:
-    - run: ./entrypoint.sh
+    - name: "Path"
+      run: echo "$GITHUB_ACTION_PATH/entrypoint.sh"
+      shell: bash
+
+    - run: $GITHUB_ACTION_PATH/entrypoint.sh
       id: detect-language
       shell: bash
