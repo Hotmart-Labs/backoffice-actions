@@ -22,7 +22,7 @@ jobs:
 
       - name: Detect Project Language
         id: detect-project-language
-        uses: ./actions/detect-language-action
+        uses: $GITHUB_ACTION_PATH/actions/detect-language-action
 
   java-findings:
     needs: pipeline-define-language
