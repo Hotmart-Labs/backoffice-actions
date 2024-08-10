@@ -18,8 +18,8 @@ jobs:
       - name: Clone Application
         uses: actions/checkout@v3
 
-      - name: Valid Hot Observability Java Finding
-        uses: Hotmart-Labs/backoffice-actions/actions/valid-hot-observability-java-action@master
+      - name: Valid Xss Protection Finding
+        uses: Hotmart-Labs/backoffice-actions/actions/valid-xss-protection-action@master
 
       - name: Valid Hot Observability Java Finding
         uses: Hotmart-Labs/backoffice-actions/actions/valid-hot-observability-java-action@master
