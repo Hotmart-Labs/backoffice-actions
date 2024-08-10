@@ -7,8 +7,6 @@ on:
         required: true
         type: string
 
-concurrency: pipeline-define-language
-
 jobs:
   pipeline-define-language:
     runs-on: ${{ inputs.runs-on }}
