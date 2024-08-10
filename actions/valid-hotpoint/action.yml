@@ -12,6 +12,11 @@ runs:
       uses: actions/setup-python@v3
       with:
         python-version: '3.x'
+
+    - name: Install PyYAML
+      run: pip install pyyaml
+      shell: bash
+
     - name: Run check script
       run: python ${{ github.action_path }}/entrypoint.py ${{ inputs.file-path }}
       shell: bash
