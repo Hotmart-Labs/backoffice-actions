@@ -11,5 +11,6 @@ if grep -q "<artifactId>hot-observability-spring-boot-starter</artifactId>" "$PO
   echo "Dependency 'hot-observability-spring-boot-starter' found in $POM_FILE"
 else
   echo "Error: Dependency 'hot-observability-spring-boot-starter' NOT found in $POM_FILE"
+  echo "see https://techdeck.hotmart.co/catalog/default/component/heimdall/docs/findings/app_without_observability_java/"
   exit 1
 fi

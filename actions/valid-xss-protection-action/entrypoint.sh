@@ -10,6 +10,7 @@ fi
 if grep -q "<artifactId>xss-protection-spring-boot-starter</artifactId>" "$POM_FILE"; then
   echo "Dependency 'hot-observability-spring-boot-starter' found in $POM_FILE"
 else
-  echo "Error: Dependency 'hot-observability-spring-boot-starter' NOT found in $POM_FILE"
+  echo "Error: Dependency 'xss-protection-spring-boot-starter' NOT found in $POM_FILE"
+  echo "see https://techdeck.hotmart.co/catalog/default/component/heimdall/docs/findings/app_without_xss_protection/"
   exit 1
 fi
