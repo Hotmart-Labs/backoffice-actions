@@ -16,10 +16,11 @@ jobs:
       - name: Clone Application
         uses: actions/checkout@v3
 
+      - name: Valid Hotpoint Finding
+        uses: Hotmart-Labs/backoffice-actions/actions/valid-hotpoint@master
+
       - name: Valid Hot Observability Java Finding
-        continue-on-error: true
         uses: Hotmart-Labs/backoffice-actions/actions/valid-hot-observability-java-action@master
 
       - name: Valid Xss Protection Finding
-        continue-on-error: true
         uses: Hotmart-Labs/backoffice-actions/actions/valid-xss-protection-action@master
