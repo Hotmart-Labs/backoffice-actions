@@ -21,3 +21,6 @@ jobs:
       - name: Valid Hot Observability Java Finding
         uses: Hotmart-Labs/backoffice-actions/actions/valid-hot-observability-java-action@master
 
+      - name: Valid Hot Observability Java Finding
+        uses: Hotmart-Labs/backoffice-actions/actions/valid-hot-observability-java-action@master
+

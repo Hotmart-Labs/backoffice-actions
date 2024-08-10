@@ -21,16 +21,10 @@ jobs:
       - name: Detect Project Language
         id: detect-project-language
         uses: Hotmart-Labs/backoffice-actions/actions/detect-language-action@master
-
-  show:
-    needs: pipeline-define-language
-    runs-on: ${{ inputs.runs-on }}
-    steps:
-      - run: echo ${{ needs.pipeline-define-language.outputs.language }}
   java-findings:
     needs: pipeline-define-language
     if: ${{ needs.pipeline-define-language.outputs.language == 'Java'}}
-    uses: Hotmart-Labs/backoffice-actions/.github/workflows/java-action.yml@master
+    uses: Hotmart-Labs/backoffice-actions/.github/workflows/java-findings.yml@master
     with:
       runs-on: ${{ inputs.runs-on }}
 

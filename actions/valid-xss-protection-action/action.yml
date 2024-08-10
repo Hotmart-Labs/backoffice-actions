@@ -1,0 +1,8 @@
+name: "Valid Xss Protection Finding"
+description: "Detects if contains Xss Protection on pom.xml"
+
+runs:
+  using: "composite"
+  steps:
+    - run: $GITHUB_ACTION_PATH//entrypoint.sh
+      shell: bash
