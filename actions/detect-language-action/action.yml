@@ -8,10 +8,6 @@ outputs:
 runs:
   using: "composite"
   steps:
-    - name: "Path"
-      run: echo "$GITHUB_ACTION_PATH/entrypoint.sh"
-      shell: bash
-
     - run: $GITHUB_ACTION_PATH/entrypoint.sh
       id: detect-language
       shell: bash

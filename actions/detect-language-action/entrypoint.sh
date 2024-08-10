@@ -25,4 +25,5 @@ else
 fi
 
 # Output the detected language
-echo "::set-output name=language::$LANGUAGE"
+# echo "::set-output name=language::$LANGUAGE"
+echo "language=$LANGUAGE" >> $GITHUB_OUTPUT
