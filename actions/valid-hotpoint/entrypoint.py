@@ -9,7 +9,11 @@ def check_hotpoint_in_yaml(file_path):
         if 'env' in data and 'HOTPOINT' in data['env'] and data['env']['HOTPOINT'] is True:
             print("The property 'env.HOTPOINT = true' is present in the file.")
         else:
+            print("")
             print("Error: The property 'env.HOTPOINT = true' is NOT present in the file.")
+            print("See https://techdeck.hotmart.co/catalog/default/component/heimdall/docs/findings/hotpoint_adoption/")
+            print("")
+
             sys.exit(1)
 
     except FileNotFoundError:
