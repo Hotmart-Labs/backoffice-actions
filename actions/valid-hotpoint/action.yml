@@ -14,3 +14,4 @@ runs:
         python-version: '3.x'
     - name: Run check script
       run: python ${{ github.action_path }}/entrypoint.py ${{ inputs.file-path }}
+      shell: bash
