@@ -6,7 +6,7 @@ def check_hotpoint_in_yaml(file_path):
         with open(file_path, 'r') as file:
             data = yaml.safe_load(file)
 
-        if 'monitoring' in data and 'apm' in data['env']:
+        if 'monitoring' in data and 'apm' in data['monitoring']:
             print("The property 'monitoring.apm' is present in the file.")
         else:
             print("")
