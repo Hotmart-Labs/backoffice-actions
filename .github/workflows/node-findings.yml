@@ -16,6 +16,6 @@ jobs:
       - name: Clone Application
         uses: actions/checkout@v3
 
-      - name: Valid Hotpoint Finding
+      - name: Validate Hotpoint Finding
         if: always()
         uses: Hotmart-Labs/backoffice-actions/actions/valid-hotpoint@master
