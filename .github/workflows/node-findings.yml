@@ -8,7 +8,7 @@ on:
         type: string
 
 jobs:
-  java-findings:
+  node-findings:
     runs-on: ${{ inputs.runs-on }}
     env:
       AWS_DEFAULT_REGION: us-east-1
