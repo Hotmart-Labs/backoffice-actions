@@ -20,6 +20,10 @@ jobs:
         if: always()
         uses: Hotmart-Labs/backoffice-actions/actions/valid-hotpoint@master
 
+      - name: Valid Monitoring apm Finding
+        if: always()
+        uses: Hotmart-Labs/backoffice-actions/actions/valid-monitoring-finding@master
+
       - name: Valid Hot Observability Java Finding
         if: always()
         uses: Hotmart-Labs/backoffice-actions/actions/valid-hot-observability-java-action@master
