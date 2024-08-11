@@ -27,5 +27,11 @@ jobs:
     uses: Hotmart-Labs/backoffice-actions/.github/workflows/java-findings.yml@master
     with:
       runs-on: ${{ inputs.runs-on }}
+  node-findings:
+    needs: define-language
+    if: ${{ needs.define-language.outputs.language == 'JavaScript/Node.js'}}
+    uses: Hotmart-Labs/backoffice-actions/.github/workflows/node-findings.yml@master
+    with:
+      runs-on: ${{ inputs.runs-on }}
 
 

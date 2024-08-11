@@ -1,0 +1,21 @@
+name: Validator
+
+on:
+  workflow_call:
+    inputs:
+      runs-on:
+        required: true
+        type: string
+
+jobs:
+  java-findings:
+    runs-on: ${{ inputs.runs-on }}
+    env:
+      AWS_DEFAULT_REGION: us-east-1
+    steps:
+      - name: Clone Application
+        uses: actions/checkout@v3
+
+      - name: Valid Hotpoint Finding
+        if: always()
+        uses: Hotmart-Labs/backoffice-actions/actions/valid-hotpoint@master
