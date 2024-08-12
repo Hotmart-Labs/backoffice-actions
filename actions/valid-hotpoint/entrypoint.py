@@ -11,7 +11,7 @@ def check_hotpoint_in_yaml(file_path):
         else:
             print("")
             print("Error: The property 'env.HOTPOINT = true' is NOT present in the file.")
-            print("See https://techdeck.hotmart.co/catalog/default/component/heimdall/docs/findings/hotpoint_adoption/")
+            print("See https://github.com/Hotmart-Labs/backoffice-actions/tree/master/actions/valid-hotpoint")
             print("")
 
             sys.exit(1)
