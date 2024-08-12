@@ -24,6 +24,10 @@ jobs:
         if: always()
         uses: Hotmart-Labs/backoffice-actions/actions/valid-monitoring-finding@master
 
+      - name: Validate Uptime Adoption  Finding
+        if: always()
+        uses: Hotmart-Labs/backoffice-actions/actions/valid-uptime-adoption-finding@master
+
       - name: Validate Hot Observability Java Finding
         if: always()
         uses: Hotmart-Labs/backoffice-actions/actions/valid-hot-observability-java-action@master

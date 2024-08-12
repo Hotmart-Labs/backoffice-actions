@@ -1,0 +1,22 @@
+name: "Valid Uptime Adoption in production.yml"
+description: "Checks if the structure monigoring.apm is present in the production.yml file"
+inputs:
+  file-path:
+    description: "Path to the YAML file"
+    required: true
+    default: "./production.yml"
+runs:
+  using: "composite"
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.x'
+
+    - name: Install PyYAML
+      run: pip install pyyaml
+      shell: bash
+
+    - name: Run check script
+      run: python ${{ github.action_path }}/entrypoint.py ${{ inputs.file-path }}
+      shell: bash
