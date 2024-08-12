@@ -4,24 +4,7 @@
 ## Description
 GitHub Actions to check if the property `hotpoint = true` is set in the `production.yml` file.
 
-## TL;DR
-
-1. Example with a single directory
-
-```yml
-name: api-accountfy-integration
-
-containerPort: 8080
-cpu: 1.0
-memory: 2048M
-replicaCount: 2
-
-env:
-  HOTPOINT: true
-```
-
 ## How to Resolve
-
 Add the property `HOTPOINT = true` in the project's `production.yml` file.
 
 Example:
